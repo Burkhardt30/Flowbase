@@ -25,14 +25,49 @@ body {
   color: #fff;
   font-size: 20px;
   @extend %muli-700;
-  background: $accent;
+  background: $accent-bg;
   border-radius: 33px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all .3s;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(44.11deg, #9F06FF 15.75%, #CD10FF 84.63%);
+    opacity: 0;
+    border-radius: 33px;
+    transition: all .3s;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+  span {
+    z-index: 2;
+  }
 }
 
-// .title {
+.title {
+  @extend %mont-700;
+  font-size: 46px;
+  line-height: 56px;
+  color: $title;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 550px;
+}
 
-// }
-
+.text {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 550px;
+}
