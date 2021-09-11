@@ -1,0 +1,38 @@
+body {
+  @extend %muli-400;
+  color: $basic;
+  font-size: 16px;
+  line-height: 26px;
+  min-height: 100%;
+  // overflow: hidden;
+}
+
+.container {
+  max-width: 1150px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 199px;
+  height: 41px;
+}
+
+.btn {
+  max-width: 206px;
+  width: 100%;
+  height: 66px;
+  color: #fff;
+  font-size: 20px;
+  @extend %muli-700;
+  background: $accent;
+  border-radius: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// .title {
+
+// }
+
