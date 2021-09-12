@@ -1,5 +1,14 @@
 $(function () {
 
+  $('.header__burger').on('click', function(){
+    $('.header__navigation').toggleClass('header__navigation--open');
+    $('.blackout').toggleClass('blackout--visible');
+  });
+  $('.blackout').on('click', function(){
+    $('.header__navigation').toggleClass('header__navigation--open');
+    $('.blackout').toggleClass('blackout--visible');
+  });
+
   $('.faq__item-btn').on('click', function () {
     if ($(this).prev().children('.faq__item-text').hasClass('faq__item-text--active')) {
       $(this).prev().children('.faq__item-text').removeClass('faq__item-text--active');
@@ -19,6 +28,15 @@ $(function () {
     arrows: false,
     slidesToShow: 2,
     infinite: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          dots: true
+        }
+      }
+    ]
   });
 
 });
