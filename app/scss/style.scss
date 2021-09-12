@@ -146,10 +146,22 @@
 
 .about {
   padding: 100px 0 120px;
-  background: url("../images/program-bg-left.svg") 11.5% 7% no-repeat,
-              url("../images/program-bg-right.svg") 103% 16% no-repeat;
+  background: url("../images/program-bg-left.svg") -4.5% 8% no-repeat;
   &__features {
     margin: 0px 0px 150px 0px;
+  }
+  &__topics {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 382px;
+      height: 382px;
+      background: url(../images/program-bg-right.svg) center / cover no-repeat;
+      top: -156px;
+      right: -37%;
+      z-index: -5;
+    }
   }
 }
 
@@ -287,7 +299,64 @@
 // ==================================TESTIMONIALS===============================================
 // ==================================TESTIMONIALS===============================================
 
+.testimonials {
+  background: linear-gradient(44.11deg, #CD10FF 15.75%, #CD10FF 15.76%, #9F06FF 84.63%);
+  color: #fff;
+  padding: 120px 0;
+  &__title {
+    color: inherit;
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin-bottom: 100px;
+    opacity: 0.8;
+  }
+  .slick-list {
+    margin: 0 -10px;
+    overflow: visible;
+  }
+  &__slide {
+    padding: 0 10px;
+  }
+  &__slide-bg {
+    padding: 50px;
+    background: rgba(76, 0, 112, 0.195968);
+    border-radius: 20px;
+  }
+  &__slide-quote {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0px 0px 30px 0px;
+  }
+  &__slide-author {
+    display: flex;
+    align-items: center;
+  }
+  &__slide-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 14px;
+    display: block;
+    flex: 0 0 auto;
+  }
+  &__slide-info {
+    flex: 1 1 auto;
+  }
+  &__slide-name {
+    @extend %muli-700;
+    line-height: 20px;
+    margin: 0px 0px 4px 0px;
+  }
+  &__slide-speciality {
+    line-height: 20px;
+    opacity: 0.8;
+  }
+}
 
+// =======================================FAQ==========================================
+// =======================================FAQ==========================================
 
 
 @import "media";
