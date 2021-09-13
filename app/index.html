@@ -9,14 +9,16 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-  <div class="blackout"></div>
+<body id="body">
   <div class="wrapper">
     <header class="header">
       <div class="header__top">
+        <div class="blackout"></div>
         <div class="container">
           <div class="header__top-inner">
-            <img class="header__logo logo" src="images/Logo.svg" alt="logo">
+            <a class="header__logo-link" href="#body">
+              <img class="header__logo logo" src="images/Logo.svg" alt="logo">
+            </a>
             <div class="header__navigation">
               <a class="header__burger" href="#">
                 <span></span>
@@ -24,10 +26,10 @@
               <nav class="header__menu menu">
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a class="menu__item-link" href="#">Course topics</a>
+                    <a class="menu__item-link" href="#topics">Course topics</a>
                   </li>
                   <li class="menu__item">
-                    <a class="menu__item-link" href="#">What students say</a>
+                    <a class="menu__item-link" href="#testimonials">What students say</a>
                   </li>
                 </ul>
               </nav>
@@ -85,7 +87,7 @@
               <p class="features__text">5 star reviews</p>
             </div>
           </div>
-          <div class="about__topics topics">
+          <div class="about__topics topics" id="topics">
             <h2 class="topics__title title">What you’ll learn</h2>
             <p class="topics__text text">
               Create beautiful webflow sites with flowbase. Clone for
@@ -162,7 +164,7 @@
           </div>
         </div>
       </section>
-      <section class="testimonials">
+      <section class="testimonials" id="testimonials">
         <div class="container">
           <h2 class="testimonials__title title">What my students say</h2>
           <p class="testimonials__text text">
@@ -312,7 +314,9 @@
       <div class="container">
         <div class="footer__inner">
           <div class="footer__top">
-            <img class="footer__logo logo" src="images/Logo.svg" alt="logo">
+            <a class="footer__logo-link" href="#body">
+              <img class="footer__logo logo" src="images/Logo.svg" alt="logo">
+            </a>
             <form class="footer__form" action="#">
               <input class="footer__input" type="email" placeholder="Stay in the loop  - sign up with your email"
                 required>
